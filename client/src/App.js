@@ -1,21 +1,14 @@
 import './App.css';
+import Navbar from './components/Navbar.js';
+import Register from './components/Register.js'
+import Login from './components/Login.js'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Welcome to my Recipe App!
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <Register />
+      <Login />
     </div>
   );
 }

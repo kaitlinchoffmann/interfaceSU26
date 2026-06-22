@@ -20,19 +20,19 @@ app.use(function(req, res, next) {
 
 app.use('/users', userRoutes)
 
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 5000
 app.listen(PORT, () => console.log(`Server started on port ${PORT}!`))
 
 /*
     Example: To call our getUsers function in our user.js model file, we first
     include the domain name or port number if using local host:
-    http://localhost:3000/
+    http://localhost:5000/
 
     Next, include the appropriate url from app.use above. For user routes, we 
     will user /users since: app.use('/users', userRoutes)
-    http://localhost:3000/users
+    http://localhost:5000/users
 
     Last, call the appropriate route in the user.js route file. Place in browser 
     url if a GET request, otherwise, use Postman:
-    http://localhost:3000/users/
+    http://localhost:5000/users/
 */

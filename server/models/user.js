@@ -54,7 +54,10 @@ async function login(username, password) {
 
 // UPDATE
 async function updatePassword(id, password) {
-  const user = await User.findByIdAndUpdate(id, {password}, {new: true})
+  const salt = await bcrypt.genSalt(10);
+  const hashed = await bcrypt.hash(password, salt);
+  const user = await User.findByIdAndUpdate(id, {password: hashed}, {new: true})
+
   return user._doc
 }
 
